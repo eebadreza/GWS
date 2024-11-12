@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- <?php header("Access-Control-Allow-Origin: http://example.com"); ?> -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>GWS Explorer | Dashboard</title>
         <link
             rel="stylesheet"
             href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
         />
-
         <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-        <link rel="stylesheet" href="/map.css" />
-        <script src="/openclose.js"></script>
-        <script src="/map.js"></script>
+        <link rel="stylesheet" href="css/map.css" />
     </head>
     <body style="background-color: #222222">
         <div id="mySidenav" class="sidenav">
@@ -22,14 +18,15 @@
                 >&times;</a
             >
             <div class="welcome">
-                <p class="headTtl">
+                <p class="headTitle">
                     Welcome to
                     <br />
                     <b>GWS Explorer</b>
                 </p>
                 <p class="headTxt">
-                    GWS Explorer is a data tracking and analysis tool 
-                    designed to retrieve sensor data and display it in the navigation panel.
+                    GWS Explorer is a data tracking and analysis platform
+                    designed to retrieve sensor data and display it in the
+                    navigation panel.
                 </p>
             </div>
 
@@ -58,7 +55,10 @@
         </div>
 
         <div id="mySidenavData" class="sidenavData" style="color: white">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()"
+            <a
+                href="javascript:void(0)"
+                class="closebtn"
+                onclick="closeNavData()"
                 >&times;</a
             >
 
@@ -130,5 +130,7 @@
         >
 
         <div id="map" style="height: 1000px; z-index: 50"></div>
+        <script src="/nav.js"></script>
+        <script src="/map.js"></script>
     </body>
 </html>
